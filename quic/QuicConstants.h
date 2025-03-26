@@ -421,13 +421,13 @@ constexpr std::chrono::microseconds kDefaultInitialRtt = 50000us;
 constexpr std::chrono::microseconds kGranularity = 10000us;
 
 // TODO 提升数值以支持SatVPN
-constexpr uint32_t kReorderingThreshold = 100;
-constexpr uint32_t kMaxReorderingThreshold = 256;
+constexpr uint32_t kReorderingThreshold = 1000;
+constexpr uint32_t kMaxReorderingThreshold = 1000;
 
 // Current draft has 9 / 8. But our friends at Google told us they saw
 // improvement with 5 / 4. Our tests also showed reduced retransmission with
 // 5 / 4 without significantly huriting application latency.
-constexpr DurationRep kDefaultTimeReorderingThreshDividend = 5;
+constexpr DurationRep kDefaultTimeReorderingThreshDividend = 20;
 constexpr DurationRep kDefaultTimeReorderingThreshDivisor = 4;
 
 constexpr auto kPacketToSendForPTO = 2;
