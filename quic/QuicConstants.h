@@ -420,7 +420,8 @@ constexpr std::chrono::microseconds kDefaultInitialRtt = 50000us;
 // Timer tick interval
 constexpr std::chrono::microseconds kGranularity = 10000us;
 
-constexpr uint32_t kReorderingThreshold = 3;
+// TODO 提升数值以支持SatVPN
+constexpr uint32_t kReorderingThreshold = 100;
 constexpr uint32_t kMaxReorderingThreshold = 256;
 
 // Current draft has 9 / 8. But our friends at Google told us they saw
